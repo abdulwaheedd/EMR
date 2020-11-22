@@ -1,0 +1,95 @@
+﻿
+@model EMR.Modules.ExtModels.CreateReq
+
+@{
+    ViewData["Title"] = "EMR Pivot Table";
+}
+
+<div class="container">
+
+    <form name="pivotForm" id="pivotForm" class="form-horizontal">
+        <div class="row">
+            <div class="col-md-10  col-md-offset-3">
+                <h2>
+                        EMR Pivot Table
+                </h2>
+                <br /><br />
+                <h1></h1><h1></h1>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-offset-2">
+            <div class="form-group">
+                <label class="col-md-4 control-label">Province</label>
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model =>model.ProvCode, ViewData["ProvCode"] as SelectList, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ProvCode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Hospital</label>
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model =>model.FacilityId, ViewData["FacilityId"] as SelectList, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.FacilityId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Year</label>
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model=>model.Year, ViewData["Year"] as SelectList, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Year, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Type" class="col-md-4 control-label">Pivot Section</label>
+                <div class="col-md-8">
+                    <select id="pivotType" for="Type" class="form-control">
+                        <option value="1">Indoor Patients </option>
+                        <option value="3">Imaging Services </option>
+                        <option value="6">Obstetrics </option>
+                        <option value="8">New Inpatient Cases </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-8 col-md-offset-4">
+                    <button id="sendbtn" onclick="send()" class="btn btn-success btn-block">Generate</button>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+       </form>
+        <hr />
+</div>
+
+    <script>
+            $(document).ready(function () {
+                $('#ProvCode').change(function () {
+                    var url = '@Url.Content("~/")' + "Pivot/facilities";
+                    var ddlsource = '#ProvCode';
+                $.getJSON(url, { ProvCode: $(ddlsource).val() }, function (data) {
+                    var items = '';
+                    $('#FacilityId').empty();
+                    $.each(data, function (i, dist) {
+                        items += "<option value='" + dist.Value + "'>" + dist.Text + "</option>";
+                    });
+                    $('#FacilityId').html(items);
+                });
+            });
+        });
+             function send(){
+                //event.preventDefault()
+                var e = document.getElementById("pivotType");
+                var type = Number(e.options[e.selectedIndex].value);
+                switch(type){
+
+                      case 1:
+                          document.pivotForm.action ="/Pivot/pivotIndoorPatients";
+                          document.pivotForm.submit();
+                      break;
+                      case 8:
+                          document.pivotForm.action ="/Pivot/pivotNewInpatients";
+                          document.pivotForm.submit();
+                      break;
+                }
+             };
+    </script>

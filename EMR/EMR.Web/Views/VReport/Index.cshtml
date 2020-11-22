@@ -1,0 +1,41 @@
+﻿@using Syncfusion.MVC.EJ;
+@using Syncfusion.JavaScript;
+@{
+    ViewBag.Title = "Visit Report";
+}
+<body style="overflow: hidden; position: static; margin: 0px; padding: 0px; width: 100%; height: 100%">
+
+    <div style="width:100%; height:100%; position:absolute;">
+        @(Html.EJ().ReportViewer("container").ProcessingMode(Syncfusion.JavaScript.ReportViewerEnums.ProcessingMode.Local)
+                                            .ReportServiceUrl(VirtualPathUtility.ToAbsolute("~/api/VDLReport"))
+                                            .ReportPath("~/App_Data/Reports/Oncology/VisitReport.rdlc")
+                                            .AjaxBeforeLoad("ajaxBeforeLoad"))
+    </div>
+    @(Html.EJ().ScriptManager())
+
+    <script>
+        var parameters = [];
+        params = getParameters();
+
+        for (var i = 0; i < params.length; i++) {
+            parameters.push({ name: params[i].name, labels: [params[i].value], values: [params[i].value], nullable: "false" });// pass the parameter values
+        }
+
+        function getParameters() {
+            var parameters = window.location.search.substr(1);//get the parameter values from url
+            var listParams = [];
+            if (parameters != "") {
+                var splitValues = parameters.split("&");
+                for (var i = 0; i < splitValues.length; i++) {
+                    var tempValue = splitValues[i].split("=");
+                    listParams.push({ name: tempValue[0], value: tempValue[1] });// sepearte the name and value of the parameter
+                }
+            }
+            return listParams;
+        }
+
+        function ajaxBeforeLoad(event) {
+            event.data = parameters; //pass the parameter value to custom data
+        };
+    </script>
+</body>

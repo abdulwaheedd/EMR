@@ -1,0 +1,271 @@
+﻿@model EMR.Modules.ExtModels.vServiceFee
+@{
+    ViewBag.Title = "Edit";
+}
+<style>
+    #tbl th {
+        padding-left: 20px !important;
+    }
+
+    #tbl td {
+        padding-right: 20px !important;
+    }
+
+    tr {
+        height: 10px !important;
+    }
+
+    table-condensed {
+        height: 10px !important;
+    }
+</style>
+@using (Html.BeginForm(null, null, FormMethod.Get, new { id = "invoiceForm" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m=>m.MRID)
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form-horizontal">
+                <h3>@Serenity.LocalText.Get("FM.Invoice.Title")</h3>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div id="printArea">
+                    <table id="tbl" style="background-color:white!important;width:100%!important">
+                        <tr>
+                            <th colspan="10"><br /></th>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center" colspan="4">
+                                <img src="~/Content/site/images/MoPHInvoice.png" />
+                            </td>
+                            @*<th colspan="2" style="text-align:center">
+                                <b>@Serenity.LocalText.Get("FM.Invoice.Mo")</b> <br />
+                                <i>@Serenity.LocalText.Get("FM.Invoice.PH")</i>
+                            </th>*@
+                            <td style="text-align:center" colspan="2">|</td>
+                            <td style="text-align:center" colspan="4">
+                                <img src="~/Content/site/images/MoPHInvoice.png" />
+                            </td>
+                            @*<th colspan="2" style="text-align:center">
+                                <b>@Serenity.LocalText.Get("FM.Invoice.Mo")</b> <br />
+                                <i>@Serenity.LocalText.Get("FM.Invoice.PH")</i>
+                            </th>*@
+                        </tr>
+                        <tr>
+                            <th colspan="4" style="text-align:center"><h3>@Serenity.LocalText.Get("FM.Invoice.InvoiceTitle")</h3></th>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="4" style="text-align:center"><h3>@Serenity.LocalText.Get("FM.Invoice.InvoiceTitle")</h3></th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.InvoiceNo")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(Model.InvoiceNo)
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.InvoiceNo")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(Model.InvoiceNo)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.PatientName")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(Model.PatName + Serenity.LocalText.Get("FM.Invoice.SonOf") + Model.PatFatName)
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.PatientName")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(Model.PatName + Serenity.LocalText.Get("FM.Invoice.SonOf") + Model.PatFatName)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.registerdate")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(Model.LastUpdated.ToShortDateString() + ' ' + Model.LastUpdated.ToShortTimeString())
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.registerdate")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(Model.LastUpdated.ToShortDateString() + ' ' + Model.LastUpdated.ToShortTimeString())
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.printtime")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString()+' ' +Serenity.LocalText.Get("FM.Invoice.times")+(Model.Times+1))
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.printtime")
+                            </th>
+                            <td colspan="2">
+                                @Html.Label(DateTime.Now.ToShortDateString() + ' ' + DateTime.Now.ToShortTimeString() +' '+ Serenity.LocalText.Get("FM.Invoice.times") + (Model.Times + 1))
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10"><br /></th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.ServiceName")
+                            </th>
+                            <td colspan="2">
+                                <b> @Html.Label(Model.ServiceDari)</b>
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.ServiceName")
+                            </th>
+                            <td colspan="2">
+                                <b> @Html.Label(Model.ServiceDari)</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.ServiceFee")
+                            </th>
+                            <td colspan="2">
+                                <b> @Html.Label(Model.ServiceFee.ToString())</b>
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.ServiceFee")
+                            </th>
+                            <td colspan="2">
+                                <b> @Html.Label(Model.ServiceFee.ToString())</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.PrintBy")
+                            </th>
+                            <td colspan="2">
+                                <b> @Html.Label(Serenity.Authorization.Username)</b>
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.PrintBy")
+                            </th>
+                            <td colspan="2">
+                                <b> @Html.Label(Serenity.Authorization.Username)</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.Cashier")
+                            </th>
+                            <td colspan="2">
+                                _____________________
+                            </td>
+                            <td style="text-align:center" colspan="2">|</td>
+                            <th colspan="2">
+                                @Serenity.LocalText.Get("FM.Invoice.Cashier")
+                            </th>
+                            <td colspan="2">
+                                _____________________
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="10"><br /></th>
+                        </tr>
+                    </table>
+
+                </div>
+                <br />
+                <table class="table table-condensed">
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="2">
+                            @Html.HiddenFor(m => m.FeeId, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                            @Html.ValidationMessageFor(model => model.FeeId, "", new { @class = "text-danger" })
+                        </td>
+                        <td colspan="2" class="align-right">
+
+                            @Serenity.LocalText.Get("FM.Invoice.wantotoprint")
+                            @Html.EditorFor(m => m.Print, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ServiceId, "", new { @class = "text-danger" })
+                        </td>
+                        <td colspan="2">
+                            <input type="submit" id="btnSubmit" disabled="disabled" value="@Serenity.LocalText.Get("FM.Invoice.SaveButton")" class="fa fa-save btn btn-primary" />
+                            <button id="btnPrint" disabled="disabled" onclick="javascript:printDiv('printArea')" value="@Serenity.LocalText.Get("FM.Invoice.PrintButton")" class="fa fa-print btn btn-danger"></button>
+                            <input type="submit"  formaction="Main" id="btnBack" value="@Serenity.LocalText.Get("FM.Invoice.BackButton")" class="fa fa-backward btn btn-info" />
+                        </td>
+                        <td colspan="2">
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+}
+<script>
+
+    $(document).ready(function () {
+        $('#Print').change(function () {
+            GetPrintPermission();
+        });
+    });
+
+    function GetPrintPermission() {
+        if ($('#Print').prop('checked')) {
+            $("#btnSubmit").prop('disabled', false);
+        } else {
+            $("#btnSubmit").prop('disabled', true);
+            $("#btnPrint").prop('disabled', true);
+        }
+    }
+
+    $('#btnSubmit').click(function (e) {
+        e.preventDefault(); // <------------------ stop default behaviour of button
+        var element = this;
+        var para = $('#FeeId').val();
+        //var f = $("#invoiceForm");
+        var formData = $("#invoiceForm").serialize();
+        $.ajax({
+            url: "/FM/ServiceFee/Edit?id=" + para,
+            type: "POST",
+            data: formData, // serializes the form's elements.
+            success: function () {
+                $("#btnPrint").prop('disabled', false);
+                $("#btnSubmit").prop('disabled', true);
+                $("#Print").prop('disabled', true);
+            },
+        }).fail(function () {
+            alert("There was an error to contact database server");
+            });
+        e.preventDefault();
+    });
+
+    function printDiv(divID) {
+        var divElements = document.getElementById(divID).innerHTML;
+        var oldPage = document.body.innerHTML;
+        document.body.innerHTML =
+            "<html><head><title></title></head><body>" +
+            divElements + "</body>";
+
+        window.print();
+        document.body.innerHTML = oldPage;
+    }
+
+    //$(function () {
+    //    var id = $('#MRID').val();
+    //    $("#btnBack").click(function (e) {
+    // e.preventDefault();
+    // document.location =  "/FM/UFPatients#edit/" + id;;
+    //});
+    //});
+</script>

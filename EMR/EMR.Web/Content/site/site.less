@@ -1,0 +1,1721 @@
+﻿@import "site.theme.less";
+@import "site.mixins.less";
+@import "site.administration.less";
+@import "site.membership.less";
+@import "site.configs.less";
+@import "site.regs.less";
+@import "site.locations.less";
+@import "site.default.less";
+@import "site.fm.less";
+@import "site.structure.less";
+@import "site.opd.less";
+@import "site.pharmacy.less";
+@import "site.imaging.less";
+@import "site.vitalsigns.less";
+@import "site.register.less";
+@import "site.medadmins.less";
+@import "site.verifications.less";
+
+.s-Administration-UserDialog {
+    > .size {
+        width: 650px;
+    }
+
+    .caption {
+        width: 150px;
+    }
+
+    .s-PropertyGrid .categories {
+        height: 470px;
+    }
+}
+.s-Regs-TblPatientsDialog {
+    .caption {
+        width: 350px;
+        text-align: left;
+    }
+    
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Regs-TblPatientsPatDetailsDialog {
+    > .size {
+        .widthAndMin(1000px);
+        .heightAndMin(350px);
+    }
+
+    .caption {
+        width: 120px;
+        text-align: left;
+    }
+}
+
+.s-Regs-TblPatientsNextOfKeenDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Regs-AdmissionsNewBornManagementDialog {
+    > .size {
+        .widthAndMin(800px);
+        .heightAndMin(350px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Regs-TblNewBornManagementDialog {
+    > .size {
+        .widthAndMin(800px);
+        .heightAndMin(350px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Regs-AdmissionsReferalDialog {
+    > .size {
+        .widthAndMin(800px);
+        .heightAndMin(350px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Regs-TblReferralDialog {
+    > .size {
+        .widthAndMin(800px);
+        .heightAndMin(350px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Regs-AdmissionsOperationsDialog {
+    > .size {
+        .widthAndMin(800px);
+        .heightAndMin(350px);
+    }
+
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Regs-AdmissionsTestResultsDialog {
+    > .size {
+        .widthAndMin(800px);
+        .heightAndMin(350px);
+    }
+
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Regs-TblPatientsAdmissionsDischargeDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Regs-TblAdmissionsDischargeDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Administration-TenantsDialog {
+    > .size {
+        .widthAndMin(1050px);
+        .heightAndMin(250px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Locations-FacilityInfoDialog {
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Locations-DistrictsDialog {
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Locations-FacilityTypesDialog {
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Locations-ProvincesDialog {
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblAbortionTypeDialog {
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-FM-LkpServiceTypesDialog {
+    .caption {
+        width: 250px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Structure-BedReportsDialog {
+    .caption {
+        width: 100px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Structure-BedReportDetailsDialog {
+    .caption {
+        width: 100px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblWardPickerDialog {
+    > .size {
+        .widthAndMin(650px);
+        .heightAndMin(400px);
+    }
+
+    .grid-container {
+        min-height: 400px;
+    }
+}
+.s-Structure-BedReportDetailsEditorDialog {
+    > .size {
+        .widthAndMin(500px);
+        .heightAndMin(250px);
+    }
+
+    .caption {
+        width: 100px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-AdmissionsReferalDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Locations-FacilityInfoDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Locations-DistrictsDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Locations-ProvincesDialog .caption {
+    width: 200px !important;
+    text-align: right !important;
+}
+
+.s-Locations-ProvincesDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Locations-FacilityTypesDialog  {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Configs-TblDiseasesCategoryDialog  {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblEducationDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblOccupationDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblBloodGroupDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblMaritalStatusDialog > .size {
+    min-width: 700px;
+    width: 700px;
+}
+
+
+.s-Configs-TblProfessionsDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Configs-TblRelationDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Configs-TblWardDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblDeptDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Configs-TblOutcomesMotherDialog  {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+
+.s-Configs-TblWrdVarDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblAgeTypesDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblCaseTypesDialog  {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblAbortionTypeDialog  {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblDiagnosisDialog {
+    > .size {
+        .widthAndMin(700px);
+    }
+
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-TblExaminationsDetailsDialog  {
+    > .size {
+        .widthAndMin(700px);
+    }
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-FM-UserFeePatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-FM-TblFeePaymentTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-FM-TblFeePaymentTabGrid s-Toolbar {
+    display: none;
+}
+
+.s-FM-LkpServicesDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-RegisterDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-VitalSignsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-OPD-VisitsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-LkpLabTestDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-PatientHistoryDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-VisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-OPD-LabTestTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-OPD-PatientHistoryTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-PhysicalExaminationTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-VitalSignsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-VisitsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-LkpLabTestDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-PatientHistoryDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-VisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-LabTestTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-VitalSignsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-LkpImagingDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-PatientHistoryTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-ImagingsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-LabTestTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-PhysicalExaminationTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-PrescriptionsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Register-RegoutpatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Register-RegvisitsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Register-RegvisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Pharmacy-MedPatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Pharmacy-MedvisitsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Pharmacy-MedPrescriptionsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Pharmacy-MedvisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Pharmacy-MedicinesDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-LabTest-LabPatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-LabTest-LabvisitsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-LabTest-LabvisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-LabTest-LabTestsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Imaging-ImagePatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Imaging-ImagevisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Imaging-ImgImagingsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Imaging-ImgImagingsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-VitalSigns-VitalPatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-VitalSigns-VitalvisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-VitalSigns-VVitalSignsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-DiagnosisTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-RecommedationsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-PatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Register-PatAttendantsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Register-PatAttendantsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Configs-CountriesDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Configs-LkpPhysExamGroupDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Configs-LkpPhysExamsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Pharmacy-MedicinelossesDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Pharmacy-MedicinelossesTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Pharmacy-MedicinesGrid {
+    .expired-data .col-expiry-cell {
+        background-color: #ff0000;
+        color: white;
+        font-weight: bold;
+    }
+
+    .nearexpire-data .col-expiry-cell {
+        background-color: #ffd800;
+        color: blue;
+    }
+
+    .notexpiring-data .col-expiry-cell {
+        background-color: #0f9041;
+        color: white;
+    }
+
+    .blance-less-thirty .col-balance-cell {
+        background-color: #ff0000;
+        color: white;
+        font-weight: bold;
+    }
+
+    .balance-minus .col-balance-cell {
+        background-color: #ffd800;
+        color: blue;
+    }
+
+    .quantity-used-over .col-quanity-cell {
+        background-color: #ff0000;
+        color: white;
+        font-weight:bold;
+    }
+}
+
+
+.s-VitalSigns-CyclevisitsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-VitalSigns-SchedulingDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-VitalSigns-SchedulingTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+
+.s-OPD-VschedulingDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-SchedulesTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-VitalSigns-CyclevisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-MedadministrationDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Medadmins-MedadminpatientsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Medadmins-MedvisitsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Medadmins-VisitsmedicineDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Medadmins-ImagevisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-MedvisitsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+.s-Medadmins-MedadministrationTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-BloodTransfusionsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Medadmins-BloodTransfusionsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-OpdBloodTransfusionsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-OpdBloodTransfusionsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-OpdMedadministrationDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-OpdMedadministrationTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-Medadmins-MedadministrationDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-MedadministrationTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-BloodTransfusionsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-BloodTransfusionsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-MPrescriptionsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-MPrescriptionsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-OpdBloodTransfusionsDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-OpdBloodTransfusionsTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+.s-OPD-OpdMedadministrationDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-OPD-OpdMedadministrationTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+
+.s-Medadmins-MMedadministrationTabDialog {
+    .caption {
+        width: 200px !important;
+        text-align: left !important;
+    }
+
+    .editor {
+        text-align: left;
+        width: 200px;
+    }
+}

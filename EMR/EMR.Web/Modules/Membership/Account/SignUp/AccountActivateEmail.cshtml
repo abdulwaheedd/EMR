@@ -1,0 +1,21 @@
+﻿@model EMR.Membership.ActivateEmailModel
+
+<html>
+<head>
+    <title>Activate your EMR account</title>
+</head>
+<body>
+    <p>@Model.DisplayName,</p>
+
+    <p>We received a request to create a new account on EMR with your e-mail address.</p>
+
+    <p>Click the link below to activate your account:</p>
+
+    <p><a href="@Model.ActivateLink">@Model.ActivateLink</a></p>
+
+    <p>If it wasn't you who requested this, you can ignore this email.</p>
+
+    Thanks,
+    The "EMR" Team
+</body>
+</html>

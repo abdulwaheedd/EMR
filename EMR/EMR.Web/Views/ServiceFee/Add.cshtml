@@ -1,0 +1,44 @@
+﻿@model EMR.Modules.ExtModels.ServiceFee
+@{
+    ViewBag.Title = "Add";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="form-horizontal">
+                <h3> @Serenity.LocalText.Get("FM.ServiceFee.AddFeeTitle")</h3>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <table class="table table-condensed">
+                    <tr>
+                        <th style="background-color:#1F7DCE;color:white" colspan="2">
+                            <span style="font-size:small;font-weight:100;font-style:italic;">Use below screen to create invoice for service fee!</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            @Serenity.LocalText.Get("FM.ServiceFee.TypeOfService")
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            @Html.DropDownListFor(m => m.ServiceId, (SelectList)ViewBag.ServiceList, "--select--", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.ServiceId, "", new { @class = "text-danger" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <div class="col-md-offset-4 col-md-10">
+                                <input type="submit" value="@Serenity.LocalText.Get("FM.ServiceFee.Save")" class="btn btn-primary" />
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+}
